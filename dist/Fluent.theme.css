@@ -1,14 +1,14 @@
 /**
  * @name Fluent
- * @author Gibbu
+ * @author danydodson
  * @version 1.0.10
  * @description Brings the look of Windows 11 to Discord.
- * @source https://github.com/DiscordStyles/Fluent
+ * @source https://github.com/danydodson/fluent
  * @invite ZHthyCw
  * @authorId 174868361040232448
 */
 
-@import url('https://discordstyles.github.io/Fluent/Fluent.css');
+@import url('https://raw.githubusercontent.com/danydodson/fluent/refs/heads/main/dist/Fluent.css');
 
 :root {
   --accent: rgb(98, 205, 254); /* The colour used throughout the app | Default: 98, 205, 254 */
