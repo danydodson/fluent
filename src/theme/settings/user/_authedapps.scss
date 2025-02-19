@@ -1,0 +1,18 @@
+@use '../../mixins';
+
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 {
+	.formNotice_aae945 {
+		@include mixins.card;
+		.h5_c46f6a {
+			@include mixins.cardTitle;
+		}
+		.formNoticeBody_aae945 {
+			@include mixins.cardDesc;
+		}
+	}
+
+	.authedApp_f0135d {
+		@include mixins.card(column, stretch);
+		margin-bottom: 4px;
+	}
+}

@@ -1,0 +1,176 @@
+@use '../mixins';
+@use '../assets/mono';
+
+#app-mount {
+	.panels_a4d4d9 {
+		background: transparent;
+		border: none;
+
+		// User area
+		& > .container_b2ca13 {
+			box-sizing: border-box;
+			background: var(--bg-main);
+			padding: 8px 14px;
+			margin-left: 11px;
+			margin-bottom: 12px;
+			width: calc(var(--channels-width) - 12px);
+			border-radius: var(--rounded) 0 0 var(--rounded);
+			border: 1px solid var(--border-high);
+			border-right: none;
+			height: var(--bottombar-height);
+			z-index: 1;
+			& > .flex_dc333f {
+				gap: 8px;
+				height: 75%;
+				width: 100%;
+			}
+			button {
+				@include mixins.btn;
+				@include mixins.btnSecondary;
+				flex: 1;
+				svg {
+					width: 18px;
+					height: 18px;
+				}
+			}
+			[class*="withTagAsButton"] { //fix game activity toogle on Vencord
+				min-width: min-content !important;
+			}
+			.avatarWrapper_b2ca13 {
+				padding: 6px;
+				min-width: unset;
+				margin: 0 8px 0 0;
+				&:hover {
+					background: transparent;
+					box-shadow: var(--server-hover-selected);
+				}
+			}
+			.nameTag_b2ca13 {
+				display: none;
+			}
+		}
+		.container_adcaac {
+			translate: 0 0;
+			&:hover {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	// Voice connected
+	.container_adcaac {
+		margin: 0 11px;
+		left: 11px;
+		right: 12px;
+		bottom: 0;
+		border-radius: var(--rounded) var(--rounded) 0 0;
+		background: var(--bg-main);
+		padding: 0;
+		border: 1px solid var(--border-high);
+		border-bottom: none;
+		flex-direction: column-reverse;
+		display: flex;
+		z-index: 1;
+		& > .flex_dc333f {
+			padding: 8px 8px 11px 8px;
+			position: relative;
+			z-index: 2;
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--bg-main);
+				border-radius: var(--rounded) var(--rounded) 0 0;
+				z-index: -1;
+			}
+			& > .flex_dc333f {
+				gap: 4px;
+				button {
+					@include mixins.btn;
+					@include mixins.btnSecondary;
+				}
+			}
+		}
+		.voiceUsers_fb2f1c {
+			gap: 8px;
+		}
+		& > .voiceUsers_adcaac {
+			padding: 8px 8px 0px 8px;
+			position: relative;
+			z-index: 2;
+			overflow: hidden !important;
+			margin: 0;
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--bg-main);
+				border-radius: var(--rounded) var(--rounded) 0 0;
+				z-index: -1;
+			}
+		}
+		&:hover .actionButtons_adcaac {
+			bottom: calc(100% - 8px);
+			opacity: 1;
+			visibility: visible;
+			transition-delay: 0.45s;
+		}
+		// a[href^='/channel'] {
+		// 	display: none;
+		// }
+	}
+	.wrapper_adcaac + .container_b2ca13 {
+		border-radius: 0 0 0 var(--rounded);
+	}
+	.inner_adcaac {
+		position: relative;
+	}
+	.rtcConnectionStatus_c0cb95 {
+		display: flex;
+		align-items: center;
+		.button_dd4f85 {
+			padding: 0;
+			margin-left: 4px;
+		}
+	}
+	.ping_c0cb95 {
+		width: 24px;
+		height: 24px;
+	}
+	.actionButtons_adcaac {
+		position: absolute;
+		bottom: 0;
+		width: calc(100% - 16px);
+		background: var(--bg-main);
+		border-radius: var(--rounded) var(--rounded) 0 0;
+		border: 1px solid var(--border-high);
+		border-bottom: none;
+		padding: 8px;
+		left: -1px;
+		visibility: hidden;
+		transition: 0.15s var(--transition) 0s;
+		z-index: 0;
+		.button_adcaac.buttonColor_adcaac.colorBrand-I6CyqQ {
+			@include mixins.btn;
+			@include mixins.btnSecondary;
+		}
+		.button_adcaac {
+			height: 100%;
+		}
+		.lottieIcon_f73ef7 svg {
+			--fluent-icons-color: black;
+		}
+	}
+	.activityPanel_a4d4d9 {
+		border: none;
+		background: transparent;
+		padding: 8px 16px;
+		&:has(+ .wrapper_adcaac:not(:empty)) {
+			z-index: 0;
+			.wrapper_adcaac > & {
+				margin-bottom: calc(100% - 3px);
+			}
+		}
+	}
+}

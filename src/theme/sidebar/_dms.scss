@@ -1,0 +1,95 @@
+@use '../mixins';
+@use '../assets/mono';
+
+#app-mount {
+	.privateChannels_f0963d {
+		background: transparent;
+	}
+	.scroller_c47fa9 {
+		background: transparent;
+		padding: 8px 2px 8px 8px !important;
+		div[style='height: 8px;'] {
+			display: none;
+		}
+	}
+
+	.searchBar_f0963d {
+		height: var(--toolbar-height);
+		box-shadow: none;
+		border-bottom: 1px solid var(--border-mid);
+		box-sizing: border-box;
+		padding: 0 8px;
+		button {
+			@include mixins.btn;
+			@include mixins.btnSecondary;
+		}
+	}
+
+	.channel_c91bad {
+		max-width: unset;
+		margin: 0 0 4px 0;
+		padding: 0;
+
+		.layout_ec8679 {
+			height: 48px;
+			padding: 0 18px;
+			cursor: var(--cursor);
+		}
+
+		.interactive_f5eb4b {
+			cursor: var(--cursor);
+			background: transparent;
+			&::before {
+				content: '';
+				border-radius: 50px;
+				position: absolute;
+				top: 50%;
+				translate: 0 -50%;
+				width: var(--pill-width);
+				height: var(--pill-height);
+				scale: 0;
+				left: 0;
+				opacity: 0;
+				background: var(--pill-unread);
+				transition: var(--pill-transition);
+			}
+			&:not(.selected_f5eb4b):has(.highlighted_ec8679)::before {
+				scale: 1 0.65;
+				opacity: 1;
+			}
+		}
+
+		.content_ec8679 {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&:hover .interactive_f5eb4b {
+			background: var(--bg-interactive-high);
+		}
+		.selected_f5eb4b {
+			background: var(--bg-interactive-high);
+			&::before {
+				scale: 1;
+				opacity: 1;
+				background: var(--accent);
+			}
+			&:hover {
+				background: var(--bg-interactive-high-hover);
+			}
+		}
+	}
+
+	.link_c91bad {
+		cursor: var(--cursor);
+		&[href='/channels/@me'] .linkButtonIcon_c91bad {
+			mask: url(mono.$people) center/cover;
+			background: var(--interactive-normal);
+			g {
+				display: none;
+			}
+		}
+	}
+}

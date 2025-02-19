@@ -1,0 +1,133 @@
+#app-mount {
+	.button_dd4f85,
+	.button_dd4f85 {
+		border-radius: var(--btn-radius);
+		padding: 4px 10px;
+		line-height: 20px;
+		font-size: var(--font-size-sm);
+		cursor: var(--cursor);
+		margin: 1px;
+		min-height: auto;
+		height: auto;
+
+		[role='button'] {
+			cursor: var(--cursor) !important;
+		}
+		[class*='shine'] {
+			display: none;
+		}
+		.contents_dd4f85 {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		&.buttonColor_adcaac {
+			background: var(--accent);
+			color: var(--accent-text);
+		}
+		&.lookFilled_dd4f85 {
+			border: 1px solid var(--btn-border-x);
+			border-top-color: var(--btn-border-t);
+			border-bottom-color: var(--btn-border-b);
+			font-weight: var(--font-weight-semibold);
+			transition: box-shadow 0.15s var(--transition);
+			&.colorBrand_dd4f85,
+			&.colorGreen-3y-Z79 {
+				background: var(--accent);
+				color: var(--accent-text);
+			}
+			&.colorRed_dd4f85 {
+				background: hsl(var(--discord-red));
+			}
+			&.colorGrey-2iAG-B,
+			&.colorPrimary_dd4f85 {
+				background: var(--btn-bg);
+				font-weight: var(--font-weight-regular);
+				color: var(--text-primary);
+				&:hover {
+					background: var(--btn-bg-hover) !important;
+				}
+				&:active {
+					background: var(--btn-bg-active) !important;
+					border-color: var(--btn-border-active) !important;
+				}
+			}
+			&.colorBrand_dd4f85,
+			&.colorGreen-3y-Z79,
+			&.colorRed_dd4f85 {
+				&:hover {
+					box-shadow: inset 0 0 0 100vmax hsl(0 0% 0% / 0.1);
+					border-color: hsl(0 0% 0% / 0.1);
+				}
+				&:active {
+					box-shadow: inset 0 0 0 100vmax hsl(0 0% 0% / 0.2);
+					border-color: hsl(0 0% 0% / 0.2);
+				}
+			}
+		}
+
+		&.lookOutlined_dd4f85 {
+			cursor: pointer;
+			border: none;
+			background: transparent !important;
+			.contents_dd4f85 {
+				background: none;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: currentColor;
+				z-index: 1;
+				border-radius: inherit;
+				opacity: 0;
+				pointer-events: none;
+			}
+			&.sizeMin-DfpWCE {
+				font-size: var(--font-size-xs);
+			}
+			&:hover::before {
+				opacity: 0.1;
+			}
+			&:active::before {
+				opacity: 0.07;
+			}
+
+			&.colorRed_dd4f85 {
+				color: hsl(var(--discord-red));
+			}
+		}
+		&.lookLink_dd4f85 {
+			cursor: pointer;
+			color: var(--accent);
+			.contents_dd4f85 {
+				background: none;
+			}
+
+			&.sizeMin_dd4f85 {
+				font-size: var(--font-size-xs);
+			}
+			&:hover {
+				background: var(--btn-bg);
+			}
+			&:active {
+				background: var(--btn-bg-active);
+			}
+		}
+	}
+	.applicationInstallButtonContent-2GoIj7 {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		.launchIcon-RTf7He {
+			margin-left: 0;
+		}
+	}
+	.component_d53fb7 {
+		margin: 4px !important;
+	}
+}

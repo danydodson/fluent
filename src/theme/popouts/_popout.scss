@@ -1,0 +1,27 @@
+@use '../mixins';
+
+#app-mount [role='dialog'] {
+	.header_e664f3,
+	.header_ac90a2 {
+		border-bottom: 1px solid var(--border-high);
+		background: var(--bg-alt);
+		box-shadow: none;
+		padding: 0 12px;
+		display: flex;
+		align-items: center;
+		height: 48px;
+		min-height: 48px;
+		.size16-rrJ6ag {
+			@include mixins.textHigh;
+		}
+	}
+
+	[class^='jumpButton_'] {
+		@include mixins.btn;
+		@include mixins.btnSecondary;
+		height: auto;
+		margin: 0;
+		top: 0;
+		right: 12px;
+	}
+}

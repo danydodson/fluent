@@ -1,0 +1,23 @@
+@use '../mixins';
+
+#app-mount {
+	.art-2Y6Pk3 {
+		display: none;
+	}
+	.header-VCOMen {
+		@include mixins.modalTitle;
+		padding-top: 0;
+		align-items: flex-start;
+	}
+	.emojiButtonContainer-gCE6AT {
+		margin: 0;
+		.sprite_d91a75 {
+			width: 20px;
+			height: 20px;
+		}
+
+		& + .inputWrapper-1YNMmM .input-2g-os5 {
+			padding-left: 42px;
+		}
+	}
+}

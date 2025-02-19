@@ -1,0 +1,59 @@
+@use '../mixins';
+@use '../assets/mono';
+
+#app-mount {
+	.bd-addon-card {
+		border-radius: var(--rounded);
+		border: 1px solid var(--border);
+		background: var(--bg-content);
+	}
+	.bd-addon-header {
+		background: transparent;
+		padding: 16px 16px 8px;
+	}
+	.bd-title {
+		@include mixins.text;
+	}
+
+	.bd-description-wrap {
+		padding: 0 16px 16px;
+	}
+
+	.bd-footer {
+		padding: 16px 16px;
+		border-top: 1px solid var(--border);
+
+		.bd-controls {
+			gap: 8px;
+		}
+		.bd-button {
+			@include mixins.btn;
+			@include mixins.btnSecondary;
+			min-width: 50px;
+			svg {
+				fill: var(--text-secondary);
+			}
+			&.bd-button-danger svg {
+				fill: hsl(var(--discord-red));
+			}
+		}
+	}
+}
+
+#Fluent-card {
+	position: relative;
+	z-index: -1;
+	&::before {
+		content: '';
+		background: url('https://i.imgur.com/HQVfRQy.jpg') center/cover;
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		opacity: 0.1;
+		pointer-events: none;
+	}
+	& > div {
+		position: relative;
+		z-index: 1;
+	}
+}

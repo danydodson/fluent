@@ -1,0 +1,12 @@
+@mixin modalTitle {
+	font-weight: var(--font-weight-semibold);
+	font-size: var(--font-size-lg);
+	margin-bottom: 12px;
+	color: var(--text-primary);
+}
+@mixin modalSubTitle {
+	font-weight: var(--font-weight-normal);
+	font-size: var(--font-size-sm);
+	margin-bottom: 6px;
+	color: var(--text-secondary);
+}

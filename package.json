@@ -1,0 +1,14 @@
+{
+	"type": "module",
+	"scripts": {
+		"dev": "bd-scss dev",
+		"build": "bd-scss build"
+	},
+	"dependencies": {
+		"@discordstyles/classes": "^0.0.16",
+		"bd-scss": "2.0.15"
+	},
+	"devDependencies": {
+		"prettier": "^3.3.2"
+	}
+}

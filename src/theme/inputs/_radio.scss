@@ -1,0 +1,28 @@
+#app-mount [role='menuitemradio'] {
+	.iconContainer_d90b3d {
+		border: 1px solid var(--text-muted);
+		box-sizing: border-box;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::before {
+			content: '';
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #000;
+			opacity: 0;
+		}
+	}
+	svg {
+		display: none;
+	}
+	&[aria-checked='true'] .iconContainer_d90b3d {
+		border-color: var(--accent);
+		background: var(--accent);
+		&::before {
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+@use '../classes' as *;
+
+#{cls('mount')} {
+	#{cls('popout.currentUser.wrapper')} {
+		left: 0;
+		#{cls('profile.overlay>popout.menu.container')} {
+			background: transparent;
+			padding: 0;
+			border: none;
+		}
+	}
+	#{cls('popout.menu.scroller>popout.menu.group')} {
+		padding: 0;
+	}
+	// Status picker
+	#{cls('popout.statusPicker.item')} {
+		padding: 0;
+	}
+	#{cls('popout.statusPicker.description')} {
+		display: none;
+	}
+}

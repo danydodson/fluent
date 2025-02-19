@@ -1,0 +1,36 @@
+// Global
+::-webkit-scrollbar-track {
+	background: transparent !important;
+	border-color: transparent !important;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--scrollbar-background) !important;
+}
+
+// Chat scrollbar
+.chatContent_a7d72e .scroller_e2e187,
+.peopleList_e0840f,
+.scroller_f4e139 {
+	&::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent !important;
+		border-color: transparent !important;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--scrollbar-background);
+	}
+}
+
+// Other scrollbars
+.members_cbd271,
+.container_ee69e0 .scroller_c43953,
+.sidebarRegionScroller_c25c6d,
+.scroller_c47fa9 {
+	&::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+}

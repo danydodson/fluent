@@ -1,0 +1,39 @@
+#app-mount {
+	// Hide avatar
+	.sidebar_a4d4d9.hiddenOnMobileStore-2z5BJi .avatarWrapper_b2ca13 {
+		display: none;
+	}
+
+	.applicationStore_cecc86 {
+		background: var(--bg-alt);
+	}
+
+	.scroller__244e5 {
+		background: transparent;
+	}
+	.featureGrid-SSlfD0 {
+		grid-template-columns: 1fr;
+	}
+	.feature-2IUcBI {
+		min-height: 180px;
+		padding: 24px;
+		background: var(--bg-content);
+		border: 1px solid var(--border-mid);
+		border-radius: var(--rounded);
+	}
+	.featureTitle-3N9Stg {
+		text-align: left;
+	}
+	.featureDescription-3U0QB3 {
+		text-align: left;
+		max-width: 50%;
+	}
+	.featureImageWrapper-2ndc8N {
+		position: absolute;
+		left: unset;
+		right: 24px;
+		top: 50%;
+		transform: translateY(-50%);
+		bottom: unset;
+	}
+}

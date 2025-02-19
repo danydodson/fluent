@@ -1,0 +1,125 @@
+@use '../classes' as *;
+
+#{cls('mount popout.menu.container')} {
+	min-width: 280px;
+	background: var(--bg-menu);
+	border: 1px solid var(--border-high);
+	border-radius: var(--rounded-high);
+	box-shadow: none;
+
+	#{cls('popout.menu.scroller')} {
+		padding: 0 !important;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		& > .item_d90b3d,
+		& > div:not([class], [role='group']) {
+			margin: 6px;
+		}
+	}
+
+	.wrapper_a24e84 {
+		padding: 6px 6px 0 !important;
+		&::after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 100%;
+			grid-column: 1 / -1;
+			background: var(--border-high);
+			margin-top: 6px;
+		}
+	}
+	.customItem_d90b3d {
+		width: 100%;
+	}
+	.button_a24e84 {
+		width: 100%;
+		border-radius: var(--rounded);
+		background: transparent;
+		cursor: var(--cursor);
+		padding: 4px 0;
+		&:hover {
+			background: var(--bg-higher);
+		}
+	}
+
+	[role='group']:not(.wrapper_a24e84, .container_b64375) {
+		padding: 6px;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		& > .item_d90b3d:last-child {
+			margin-bottom: 0;
+		}
+		& > .hideInteraction_d90b3d {
+			padding: 0;
+		}
+	}
+	[role='separator'] {
+		margin: 2px 6px;
+		border-color: var(--border-high);
+	}
+	[role='slider'] {
+		.grabber-2GQyvM {
+			width: 14px;
+			height: 14px;
+			transform: translateY(0);
+		}
+	}
+
+	.groupLabel-16o1xl {
+		padding-top: 0;
+		padding-bottom: 6px;
+		min-height: auto;
+	}
+
+	.item_d90b3d {
+		margin: 0;
+		border-radius: var(--rounded);
+		padding: 8px 12px;
+		cursor: var(--cursor);
+		gap: 8px;
+		.iconContainer_d90b3d {
+			margin: 0;
+			display: flex;
+			svg {
+				margin: auto;
+			}
+		}
+		.icon_d90b3d {
+			color: currentColor;
+		}
+		.newBadge__4f501 {
+			font-size: 10px;
+			border-radius: var(--rounded);
+			margin-top: -4px;
+			font-weight: 500;
+			padding: 0 4px;
+		}
+
+		&.hideInteraction-2jPGL_ {
+			padding: 0;
+		}
+		&.focused_d90b3d,
+		&:active:not(.hideInteraction-2jPGL_) {
+			background: var(--bg-menu-item);
+			color: var(--text-primary) !important;
+		}
+		&.colorPremium-vwmYZQ {
+			color: hsl(var(--discord-pink));
+		}
+		&.colorBrand-3cPPsm {
+			color: var(--accent);
+		}
+	}
+	// Reset
+	.submenuContainer-3EVTeH {
+		.item_d90b3d {
+			flex-direction: row;
+		}
+		.layer-2aCOJ3 {
+			margin-top: -6px;
+		}
+	}
+}

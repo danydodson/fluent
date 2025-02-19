@@ -1,0 +1,24 @@
+@use '../mixins';
+
+#app-mount {
+	.messagesPopoutWrap_ac90a2 {
+		@include mixins.popoutContainer;
+
+		.messageGroupWrapper_ac90a2 {
+			background: transparent;
+		}
+		.cozy_f9f2ca.wrapper_f9f2ca {
+			padding: 8px 16px 8px 72px;
+			img {
+				left: 16px;
+			}
+			.header_f9f2ca {
+				margin-bottom: 6px;
+			}
+		}
+		.actionButtons_ac90a2 {
+			top: 0;
+			right: 0;
+		}
+	}
+}

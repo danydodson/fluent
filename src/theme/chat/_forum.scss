@@ -1,0 +1,59 @@
+@use '../mixins';
+@use '../classes' as *;
+
+#{cls('mount')} {
+	#{cls('forum.container')} {
+		background: transparent;
+	}
+
+	#{cls('forum.header.container')} {
+		background: transparent;
+		box-shadow: none;
+		border: none;
+	}
+	#{cls('forum.header.titleContainer')} {
+		align-items: center;
+		gap: 16px;
+		cursor: default;
+	}
+	#{cls('forum.header.form')} {
+		padding: 0;
+		#{cls('input.container')} {
+			margin-top: 0;
+		}
+	}
+	#{cls('forum.card.container')} {
+		@include mixins.card($fgap: 0);
+		cursor: default;
+		transition: none;
+		&:hover {
+			box-shadow: none;
+			transform: none;
+			background: var(--bg-content-alt);
+		}
+	}
+	#{cls('forum.card.tag.container')} {
+		border: 1px solid var(--border-high);
+		background: transparent;
+		height: 28px;
+		#{cls('forum.card.emoji')} {
+			margin-right: 8px;
+			width: 14px;
+			height: 14px;
+		}
+		#{cls('forum.card.tag.text')} {
+			font-size: var(--font-size-xs);
+		}
+		&:hover {
+			background: var(--bg-interactive-high);
+		}
+		&#{cls('forum.card.selected')} {
+			border-color: var(--accent);
+		}
+	}
+
+	#{cls('forum.sidebar.container')},
+	#{cls('forum.sidebar.footer')} {
+		@include mixins.card($fdir: column, $aitem: flex-start);
+	}
+}

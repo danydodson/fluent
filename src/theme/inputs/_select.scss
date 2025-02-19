@@ -1,0 +1,77 @@
+@use '../mixins';
+
+#app-mount {
+	.select_f6639d {
+		background: var(--btn-bg);
+		font-weight: var(--font-weight-regular);
+		color: var(--text-normal);
+		border: 1px solid var(--btn-border-x);
+		border-top-color: var(--btn-border-t);
+		border-bottom-color: var(--btn-border-b);
+		border-radius: var(--btn-radius);
+		cursor: var(--cursor);
+		transition: box-shadow 0.15s var(--transition);
+		padding: 6px 6px 6px 12px;
+
+		.value-26hJ01 {
+			@include mixins.text;
+		}
+		.icons-2dXYop {
+			width: 18px;
+			height: 18px;
+		}
+
+		&:hover {
+			background: var(--btn-bg-hover);
+		}
+		&:active {
+			background: var(--btn-bg-active);
+			border-color: var(--btn-border-active);
+		}
+	}
+
+	.popout_f6639d {
+		background: var(--bg-menu);
+		border-radius: var(--rounded);
+		border: 1px solid var(--border);
+		box-shadow: var(--shadow-flyout);
+		margin-top: 6px;
+		padding: 6px !important;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		max-height: 350px !important;
+	}
+	.option_f6639d {
+		border-radius: var(--rounded);
+		font-size: var(--font-size-sm);
+		padding: 10px 14px;
+		position: relative;
+		cursor: var(--cursor);
+		&:hover,
+		&:focus,
+		&.focused-ODgjnC {
+			background: var(--bg-menu-item-hover);
+		}
+		&[aria-selected='true'] {
+			background: var(--bg-menu-item-hover);
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 3px;
+				height: var(--pill-height);
+				background: var(--accent);
+				border-radius: 30%;
+			}
+		}
+	}
+	.selectedIcon_f6639d {
+		display: none;
+	}
+	.optionLabel-1h0MHL {
+		margin: 0;
+	}
+}

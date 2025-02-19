@@ -1,0 +1,49 @@
+#app-mount {
+	.autocomplete-3jLKb0j,
+	.outerWrapper_fe2299,
+	.autocomplete_bcc24e {
+		background: var(--bg-menu);
+		border: 1px solid var(--border-high);
+		box-shadow: var(--shadow-flyout);
+	}
+
+	// Left side
+	.wrapper_efd8e6,
+	.wrapper_dc0b29 {
+		background: var(--bg-main);
+	}
+
+	// Right side
+	.wrapper_e06857 {
+		background: var(--bg-menu);
+	}
+
+	.autocompleteRow_bcc24e {
+		border-radius: var(--rounded);
+		padding: 0 4px;
+		.base_bcc24e {
+			padding: 6px 16px;
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: var(--pill-width);
+				height: 0;
+				border-radius: 30px;
+				background: var(--accent);
+				opacity: 0;
+				transition: var(--pill-transition);
+			}
+		}
+		.selected-3H3-RC {
+			background: var(--bg-menu-item);
+			&::before {
+				height: var(--pill-height);
+				opacity: 1;
+			}
+		}
+	}
+}

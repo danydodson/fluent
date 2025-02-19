@@ -1,0 +1,18 @@
+@use '../classes' as *;
+
+#{cls('mount')} {
+	#{cls('chat.divider.container')} {
+		margin: var(--chat-spacing-y) calc(var(--chat-spacing-x) - 11px) var(--chat-spacing-y) var(--chat-spacing-x);
+		border-color: var(--border-mid);
+		top: 0;
+
+		&#{cls('chat.divider.unread')} {
+			border-color: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
+		}
+	}
+	#{cls('chat.divider.content')} {
+		border: none;
+		background: var(--bg-alt);
+		padding: 2px 32px;
+	}
+}

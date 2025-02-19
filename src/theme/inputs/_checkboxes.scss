@@ -1,0 +1,33 @@
+#app-mount [role='menuitemcheckbox'] {
+	.iconContainer_d90b3d {
+		border: 1px solid var(--text-muted);
+		border-radius: var(--rounded);
+		width: 18px;
+		height: 18px;
+		box-sizing: border-box;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::before {
+			content: '';
+			width: 10px;
+			height: 4px;
+			border-left: 1px solid #000;
+			border-bottom: 1px solid #000;
+			transform: rotate(-45deg);
+			margin-top: -2px;
+			opacity: 0;
+		}
+	}
+	svg {
+		display: none;
+	}
+	&[aria-checked='true'] .iconContainer_d90b3d {
+		border-color: var(--accent);
+		background: var(--accent);
+		&::before {
+			opacity: 1;
+		}
+	}
+}

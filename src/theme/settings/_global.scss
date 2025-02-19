@@ -1,0 +1,100 @@
+@use '../assets/mono';
+@use '../mixins';
+
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 {
+	// Main title
+	.contentColumn_c25c6d {
+		& > .heading-lg-semibold__85c17:first-child,
+		& > div > div:first-child > .sectionTitle_a6ae9b:first-child .title_c46f6a,
+		& > div:first-child > .sectionTitle_a6ae9b:first-child .title_c46f6a {
+			@include mixins.title;
+		}
+	}
+	.title-2dsDLn {
+		cursor: var(--cursor);
+	}
+
+	// Section title
+	[class^='margin'] > .title_c46f6a,
+	.marginTop40_f7730b > .sectionTitle_a6ae9b > .title_c46f6a,
+	.title_c46f6a.marginBottom8_f7730b,
+	.sectionTitle_a6ae9b .title_c46f6a:not(h1) {
+		@include mixins.subTitle;
+	}
+
+	// Dividers
+	[class*='divider_'] {
+		display: none;
+	}
+
+	// Section description/text
+	.children_a6ae9b > .description-30xx7u.formText-2ngGjI {
+		@include mixins.subText;
+	}
+
+	// Form description (use data to make discord work, ect...)
+	.title_c46f6a.marginBottom8_f7730b,
+	.title_c46f6a.defaultMarginh3-2aILfT {
+		& + .description-30xx7u.formText-2ngGjI {
+			background: var(--bg-content);
+			border-radius: var(--rounded);
+			border: 1px solid var(--border);
+			padding: 16px;
+		}
+	}
+
+	// Spacing
+	.children_a6ae9b > .divider-_0um2u + div {
+		margin-top: 40px;
+	}
+
+	// Switches
+	.container_ed1d57 {
+		@include mixins.card(column, flex-start);
+		margin-top: 0;
+		margin-bottom: 4px;
+		.title_ed1d57 {
+			@include mixins.cardTitle;
+		}
+		.note_ed1d57 {
+			@include mixins.cardDesc;
+		}
+		& + .title_c46f6a,
+		& + div[class^='margin']:not(.container_ed1d57) {
+			margin-top: 40px;
+		}
+	}
+
+	// Scrollbars
+	.contentRegionScroller_c25c6d {
+		margin-top: calc(var(--win-btn-height) + 16px);
+	}
+
+	// Spacing resets
+	[class^='margin'] + [class^='margin'] {
+		margin-top: 40px;
+		margin-bottom: 0;
+	}
+	.children_a6ae9b > [class^='marginBottom']:not(:only-child):first-child {
+		margin-bottom: 0;
+	}
+	.title_c46f6a.defaultMarginh3-2aILfT {
+		margin-top: 40px;
+	}
+
+	// Save changes
+	.noticeRegion_c25c6d {
+		max-width: 980px;
+		right: 0;
+	}
+	.container_b6cd66 {
+		box-shadow: var(--shadow-flyout);
+		padding: 16px;
+		background: var(--bg-content-alt) !important;
+		border: 1px solid var(--border);
+		border-radius: var(--rounded);
+		.flex_dc333f {
+			gap: 8px;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@use '../../assets/mono';
+@use '../../mixins';
+
+#app-mount #profile-customization-tab {
+	.top-K_jibn {
+		border: none;
+	}
+	.baseLayoutProfileThemes-1Jj-oN {
+		flex-direction: column;
+	}
+	.customizationSection_b3a5c2 {
+		@include mixins.card;
+		justify-content: space-between;
+		.description_b89ec7 {
+			display: none;
+		}
+		&:last-child {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		&.withDivider_b3a5c2:not(.section_c95253) .buttonsContainer_a611c9 {
+			flex-direction: row-reverse;
+			gap: 8px;
+		}
+	}
+	.title_b3a5c2 {
+		margin: 0;
+	}
+
+	.tryItOutSection_eb2d2c {
+		display: none;
+	}
+}

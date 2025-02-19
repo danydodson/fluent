@@ -1,0 +1,79 @@
+@use '../mixins';
+
+#app-mount {
+	.searchResultsWrap_c2b47d {
+		border-left: 1px solid var(--border-mid);
+		background: var(--bg-alt);
+	}
+	.searchHeader_b7c924 {
+		background: var(--bg-main);
+		border-bottom: 1px solid var(--border-mid);
+		padding: 8px 8px 8px 16px;
+		.size16-rrJ6ag {
+			@include mixins.text;
+		}
+		.item-3XjbnG {
+			@include mixins.btn;
+			@include mixins.btnSecondary;
+			margin: 0;
+			height: auto;
+			&.selected-g-kMVV {
+				@include mixins.btnPrimary;
+			}
+		}
+	}
+	.channelName-3w2Y3c {
+		background: transparent;
+	}
+	.container_ddc613 .button_ddc613 {
+		@include mixins.btn;
+		@include mixins.btnSecondary;
+		height: auto;
+	}
+	.searchResult_ddc613 {
+		background: transparent;
+		border-radius: 0;
+		margin-bottom: 0;
+		cursor: var(--cursor);
+		.cozy_f9f2ca {
+			padding-left: calc(var(--chat-spacing-x) + 20px);
+		}
+		.avatar_f9f2ca {
+			left: calc(var(--chat-spacing-x) / 2 - 16px);
+		}
+	}
+	.message_ddc613 {
+		padding-bottom: 0;
+	}
+
+	.pageControl-1XvHg0 {
+		padding-bottom: 16px;
+		& > .pageButton-1GMGeJ,
+		div[role='button'] {
+			@include mixins.btn;
+			@include mixins.btnSecondary;
+			min-height: 32px;
+			max-height: 32px;
+			margin: 0;
+			border-radius: 0 !important;
+		}
+		& > .pageButton-1GMGeJ.activeButton-LRWFC_ {
+			@include mixins.btnPrimary;
+		}
+		& > button {
+			&:first-child {
+				border-radius: var(--rounded) 0 0 var(--rounded) !important;
+			}
+			&:last-child {
+				border-radius: 0 var(--rounded) var(--rounded) 0 !important;
+			}
+		}
+		.gap-35QmZH {
+			margin: 0;
+			width: auto;
+			height: auto;
+			min-width: unset;
+			padding: 0;
+		}
+	}
+}

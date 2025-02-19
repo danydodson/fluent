@@ -1,0 +1,119 @@
+@use '../assets/mono';
+@use '../mixins';
+
+#app-mount {
+	.guilds_a4d4d9 {
+		[class*='pill'] {
+			width: 4px;
+			margin-left: 0;
+			left: calc((var(--server-container) / 2) - (var(--server-size) / 2));
+			z-index: 1;
+			height: var(--server-size);
+			span {
+				height: var(--pill-height) !important;
+				width: 100% !important;
+				transform: scale(0, 1) !important;
+				transition: 0.15s var(--transition) !important;
+				margin-left: 0;
+				border-radius: var(--rounded-high);
+			}
+			@for $i from 0 through 8 {
+				span[style*='height: #{$i}'] {
+					transform: scale(1, 0.5) !important;
+					background: var(--pill-unread);
+				}
+			}
+			// Hovered
+			@for $i from 9 through 20 {
+				span[style*='height: #{$i}'] {
+					transform: scale(1, 0.7) !important;
+					background: var(--pill-hovered);
+				}
+			}
+			// Selected
+			@for $i from 21 through 40 {
+				span[style*='height: #{$i}'] {
+					transform: scale(1, 1) !important;
+					background: var(--accent);
+				}
+			}
+		}
+	}
+	.listItem_c96c45 {
+		margin: 0 0 4px;
+		width: var(--server-container);
+		position: relative;
+		foreignObject {
+			mask: none;
+			border-radius: var(--rounded);
+			box-sizing: border-box;
+		}
+	}
+	.wrapper_f90abb {
+		border-radius: var(--rounded);
+		cursor: var(--cursor);
+		width: var(--server-size);
+		height: var(--server-size);
+	}
+	.wrapper_c5f96a {
+		cursor: var(--cursor);
+	}
+	.wrapper_f90abb {
+		position: relative;
+		transition: box-shadow 0.15s var(--transition);
+		&:hover,
+		&.selected_f90abb {
+			box-shadow: var(--server-hover-selected);
+		}
+	}
+
+	.svg-2zuE5p {
+		border-radius: 50%;
+		box-sizing: border-box;
+		width: var(--server-size);
+		height: var(--server-size);
+		foreignObject {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.icon_f90abb,
+	.childWrapperNoHoverBg_f90abb {
+		width: var(--server-icon-size);
+		height: var(--server-icon-size);
+		border-radius: var(--server-icon-shape);
+		position: relative;
+		z-index: 2;
+	}
+
+	.wrapper_f90abb svg {
+		width: 75%;
+		height: 75%;
+		mask: url(mono.$home) center/cover;
+		background: var(--interactive-normal);
+		path {
+			display: none;
+		}
+	}
+
+	.childWrapperNoHoverBg_f90abb {
+		background: transparent;
+		font-weight: var(--font-weight-semibold);
+	}
+	.wrapper_f90abb.selected_ae80f7 .childWrapperNoHoverBg_f90abb {
+		background: transparent;
+		color: var(--text-primary);
+	}
+
+	.circleIconButton_db6521 {
+		background: transparent;
+		&.selected_db6521 {
+			background: transparent;
+		}
+	}
+
+	.blobContainer_a5ad63:active {
+		transform: none;
+	}
+}

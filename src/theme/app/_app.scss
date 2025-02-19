@@ -1,0 +1,56 @@
+@use '../classes' as *;
+
+// Wack ass text flickering
+html,
+span:not([class*='spinner_'], [class*='spinnerItem']) {
+	backface-visibility: hidden;
+}
+
+body,
+#{cls('mount')},
+#{cls('app.inner')} {
+	background: var(--bg-main);
+}
+#{cls('app.bg')} {
+	background: transparent;
+}
+
+// Remove pointer from clickable
+[class*='clickable_'],
+[class*='cursorPointer_'],
+[class*='selectable_'] {
+	cursor: var(--cursor) !important;
+}
+
+// Content
+#{cls('app.base')} {
+	background: var(--bg-alt);
+	border-top: 1px solid var(--border-high);
+	border-left: 1px solid var(--border-high);
+	border-top-left-radius: var(--rounded);
+
+	// Make bottom left status picker visible in server list.
+	overflow: visible;
+}
+#{cls('app.baseContent')} {
+	width: calc(100vw - var(--server-container));
+}
+
+// Version
+#{cls('settings.layer settings.sidebar.info')} > #{cls('settings.sidebar.infoLine')}:first-child::before {
+	display: block;
+	content: 'Fluent v' var(--fluent-version);
+	text-transform: none;
+}
+
+// Settings animation fixes
+#{cls('app.layer')} {
+	transform: scale(1) !important;
+	z-index: 1;
+	&#{cls('app.baseLayer')} {
+		transform: none !important;
+		opacity: 1 !important;
+		padding-top: 0 !important;
+		transition: none !important;
+	}
+}

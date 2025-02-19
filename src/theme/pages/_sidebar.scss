@@ -1,0 +1,52 @@
+@use '../mixins';
+
+#app-mount {
+	.container_bf550a {
+		background: transparent;
+	}
+	.nowPlayingColumn_c2739c {
+		background: transparent;
+	}
+
+	.scroller_bf550a {
+		border-left: 1px solid var(--border-mid);
+		margin: 0;
+	}
+
+	.header_bf550a {
+		margin: 0 0 16px;
+		@include mixins.subTitle;
+	}
+
+	.itemCard_f02fcf {
+		border-radius: var(--rounded);
+		border: 1px solid var(--border);
+		background: var(--bg-content);
+		cursor: var(--cursor);
+		padding: 0;
+		.sectionTitle-2AR_TY {
+			@include mixins.text;
+		}
+		.size14-3fJ-ot {
+			@include mixins.subText;
+		}
+		&:hover {
+			background: var(--bg-content-alt);
+		}
+	}
+	.header_cd82a7 {
+		padding: 12px;
+	}
+	.body_cd82a7 {
+		margin: 0;
+		border-top: 1px solid var(--border);
+		border-radius: 0;
+		background: transparent;
+	}
+	.section_cd82a7 {
+		background: transparent;
+	}
+	.voiceSectionDetails_cd82a7 {
+		cursor: var(--cursor);
+	}
+}

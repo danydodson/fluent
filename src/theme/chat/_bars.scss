@@ -1,0 +1,74 @@
+@use '../assets/mono';
+@use '../mixins';
+@use '../classes' as *;
+
+#{cls('mount')} {
+	// Typing
+	#{cls('chat.textbox.typing.container')} {
+		bottom: 100%;
+		left: 0;
+		padding: 0 10px;
+		right: -1px;
+		pointer-events: none;
+	}
+
+	// New message & jump to present
+	#{cls('chat.bars.newMessages.container')},
+	#{cls('chat.bars.jumpTo')} {
+		border-radius: var(--btn-radius);
+		opacity: 1;
+		left: unset;
+		opacity: 1;
+		background: var(--bg-alt);
+		box-shadow: none;
+		button {
+			@include mixins.btn;
+			@include mixins.btnSecondary;
+			cursor: var(--cursor);
+			height: auto;
+			&:first-child {
+				border-radius: var(--btn-radius) 0 0 var(--btn-radius);
+				margin-right: -1px;
+			}
+			&:last-child {
+				border-radius: 0 var(--btn-radius) var(--btn-radius) 0;
+			}
+		}
+		&:active {
+			padding-top: 0;
+		}
+	}
+
+	// New message
+	#{cls('chat.bars.newMessages.container')} {
+		top: 16px;
+		#{cls('chat.bars.buttonIcon')} {
+			mask: url(mono.$comment-check) center/cover;
+			background: currentColor;
+			path {
+				display: none;
+			}
+		}
+	}
+
+	// Mention
+	.attachedBars_d0696b {
+		background: transparent;
+	}
+	.replyBar_b11c5e {
+		background: var(--bg-alt);
+	}
+
+	// Jump to present
+	#{cls('chat.bars.jumpTo')} {
+		bottom: 0;
+		padding-bottom: 0;
+		& > span {
+			@include mixins.btn;
+			@include mixins.btnSecondary;
+			border-radius: 0 var(--btn-radius) var(--btn-radius) 0;
+			height: 30px;
+			box-sizing: border-box;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@mixin card($fdir: row, $aitem: center, $fgap: 0 18px) {
+	background: var(--bg-content);
+	border: 1px solid var(--border);
+	border-radius: var(--rounded);
+	padding: 18px;
+	display: flex;
+	flex-direction: $fdir;
+	align-items: $aitem;
+	gap: $fgap;
+	position: relative;
+}
+@mixin cardIcon {
+	width: 22px;
+	height: 22px;
+	mask-size: cover;
+	mask-position: center;
+	background: var(--text-primary);
+	display: block;
+}
+@mixin cardTitle {
+	color: var(--text-primary);
+	font-size: var(--font-size-sm);
+	font-weight: var(--font-weight-regular);
+	margin: 0;
+	text-transform: none;
+	display: block;
+}
+@mixin cardDesc {
+	display: block;
+	font-size: var(--font-size-xs);
+	color: var(--text-muted);
+	margin-top: 4px;
+}
